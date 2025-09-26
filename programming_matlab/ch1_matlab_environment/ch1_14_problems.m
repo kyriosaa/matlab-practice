@@ -6,26 +6,26 @@
     % sin(x)cos(x)          for -10 <= x <= 10
     % cos(x)sin(x)exp(x/10) for  -1 <= x <=  1
 
-    x = linspace(-10, 10, 500);
-    y = sin(x);
-    plot(x, y)
-    title('1-1 sin(x)')
-    pause;
-
-    x = linspace(-10, 10, 500);
-    y1 = sin(x);
-    y2 = cos(x);
-    plot(x, y1, x, y2)
-    title('1-1 sin(x)cos(x)')
-    pause;
-
-    x = linspace(-1, 1, 100);
-    y1 = cos(x);
-    y2 = sin(x);
-    y3 = exp(x/10);
-    plot(x, y1, x, y2, x, y3)
-    title('1-1 cos(x)sin(x)exp(x/10)')
-    pause;
+    % x = linspace(-10, 10, 500);
+    % y = sin(x);
+    % plot(x, y)
+    % title('1-1 sin(x)')
+    % pause;
+    % 
+    % x = linspace(-10, 10, 500);
+    % y1 = sin(x);
+    % y2 = cos(x);
+    % plot(x, y1, x, y2)
+    % title('1-1 sin(x)cos(x)')
+    % pause;
+    % 
+    % x = linspace(-1, 1, 100);
+    % y1 = cos(x);
+    % y2 = sin(x);
+    % y3 = exp(x/10);
+    % plot(x, y1, x, y2, x, y3)
+    % title('1-1 cos(x)sin(x)exp(x/10)')
+    % pause;
 % ------------------------------------------------------------------------
 % 1-2: Write a script that does the following:
     % 1. Creates a random 5x5 matrix, displays that random matrix,
@@ -39,7 +39,20 @@
     %    first character was, what the second character was, and what the
     %    third character was.
 
+    rand_matrix = rand(5, 5)
+    inv_rand_matrix = inv(rand_matrix)
+    final_matrix = rand_matrix*inv_rand_matrix
+    pause;
 
+    p1 = input('Input phrase 1: ', 's');
+    p2 = input('Input phrase 2: ', 's');
+    p3 = input('Input phrase 3: ', 's');
+    p123 = [p1, p2, p3];
+    fprintf(p123);
+    fprintf('\n');
+    pause;
+
+    
 % ------------------------------------------------------------------------
 % 1-3: Create a script that does the following:
     % 1. Displays your name and major.
